@@ -36,7 +36,10 @@ crow, ccol = rows // 2, cols // 2
 
 # Filtro Gaussiano
 mask = np.zeros((rows, cols, 2), np.uint8)
-cv2.circle(mask, (ccol, crow), 30, (1, 1, 1), -1)
+cv2.circle(mask, (ccol, crow), 50, (1, 1, 1), -1)
+
+#mask = np.ones((rows, cols, 2), np.uint8)
+#cv2.circle(mask, (ccol, crow), 50, (0, 0, 0), -1)
 
 # Aplica o filtro passa-baixa
 fshift = dft_shift * mask
